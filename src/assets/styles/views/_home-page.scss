@@ -1,0 +1,54 @@
+.pic {
+  left: 0;
+  // background-image: url(https://res.cloudinary.com/disku3v4j/image/upload/v1638473513/ezra-jeffrey-comeau-r4M6ZlaDLLU-unsplash_hki13q.jpg);
+  background-image: url(https://res.cloudinary.com/dmxsqwvwv/image/upload/v1642708492/rentme/bgs/EOW45oEWsAATZsx_y0gvdk.png);
+  // background-image: url(https://res.cloudinary.com/dmxsqwvwv/image/upload/v1642714089/rentme/bgs/photo-1578305034054-6eb022b06c9d_sl8zpy.jpg);
+  height: 82vh;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .main-filters {
+    margin: 0px auto;
+    margin-top: 75px;
+  }
+
+  .main-txt {
+    position: absolute;
+    font-family: airbnb-medium, sans-serif;
+    font-size: rem(30px);
+    color: white;
+    width: max-content;
+    line-height: 1.2em;
+    right: 4%;
+    top: 35%;
+    text-align: center;
+    text-shadow: -1px 2px 2px rgba(34, 34, 34, 0.479);
+  }
+  // }
+}
+
+@media screen and (min-width: 760px) {
+  .pic {
+    // background-image: url(https://res.cloudinary.com/dmxsqwvwv/image/upload/v1642708492/rentme/bgs/EOW45oEWsAATZsx_y0gvdk.png);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .main-txt {
+      font-family: airbnb-medium, sans-serif;
+      font-size: rem(43.2px);
+      margin: 0;
+      left: 5%;
+      top: 50%;
+      line-height: 1.5em;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      text-align: left;
+      text-shadow: -1px 2px 2px rgba(34, 34, 34, 0.815);
+      align-self: start;
+    }
+    // }
+  }
+}

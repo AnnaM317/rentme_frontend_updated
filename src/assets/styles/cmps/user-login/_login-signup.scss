@@ -1,0 +1,101 @@
+.login-signup {
+  position: fixed;
+  z-index: 999999;
+  // top: 20%;
+  top: 0;
+  background-color: white;
+  border: 1px solid $clr8;
+  box-shadow: 0 6px 6px -6px $clr7;
+  width: 100%;
+  height: max-content;
+  .login-signup-header {
+    border-bottom: 1px solid $clr8;
+    padding: 15px;
+    // align-items: center;
+    h5 {
+      position: absolute;
+      display: block;
+      width: max-content;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 5px;
+      // margin: 0px auto;
+      font-family: airbnb-medium, sans-serif;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: rem(18px);
+    }
+  }
+  .user-inputs {
+    padding: 20px;
+    form {
+      margin: 20px 0px;
+      input {
+        font-family: inherit;
+
+        border: solid $clr7;
+        border-width: 1px 1px 0px 1px;
+        outline: none;
+        padding: 13px 10px;
+        font-size: rem(18px);
+        margin: 0px;
+        width: 100%;
+        &:focus {
+          background-color: transparent;
+          color: $clr2;
+        }
+        ::placeholder {
+          color: $clr7;
+        }
+      }
+      input:first-of-type {
+        border-radius: 8px 8px 0px 0px;
+      }
+      input:last-of-type {
+        border-radius: 0px 0px 8px 8px;
+        border-bottom: 1px solid $clr7;
+        margin-bottom: 15px;
+      }
+      input[type='text'],
+      input[type='email'],
+      input[type='password'] {
+        background-color: transparent;
+      }
+      .special-hover-btn {
+        border-radius: 8px;
+      }
+    }
+  }
+  small button {
+    background-color: transparent;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+}
+
+.close-btn {
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .login-signup {
+    width: 80%;
+    // top: -10%;
+    top: 30%;
+    // bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 860px) {
+  .login-signup {
+    // top: -25%;
+    width: 530px;
+  }
+}

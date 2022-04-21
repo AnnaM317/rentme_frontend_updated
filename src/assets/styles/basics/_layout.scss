@@ -1,0 +1,52 @@
+.main-container {
+  display: grid;
+  grid-template-columns: $layout-padding * 1px 1fr $layout-padding * 1px;
+  grid-auto-rows: max-content;
+  > * {
+    grid-column: 2;
+
+    &.full {
+      padding: 0;
+      margin: 0;
+      grid-column: 1 /-1;
+    }
+  }
+
+  @include for-narrow-layout {
+    grid-template-columns:
+      minmax($layout-padding * 1px, 1fr)
+      minmax(auto, $mobile-breakpoint)
+      minmax($layout-padding * 1px, 1fr);
+  }
+  @include for-normal-layout {
+    grid-template-columns:
+      minmax($layout-padding * 1px, 1fr)
+      minmax(auto, $narrow-breakpoint)
+      minmax($layout-padding * 1px, 1fr);
+  }
+
+  @include for-wide-layout {
+    grid-template-columns:
+      minmax($layout-padding * 1px, 1fr)
+      minmax(auto, $normal-breakpoint)
+      minmax($layout-padding * 1px, 1fr);
+  }
+  @include for-anna-layout {
+    grid-template-columns:
+      minmax($layout-padding * 1px, 1fr)
+      minmax(auto, $wide-anna-breakpoint)
+      minmax($layout-padding * 1px, 1fr);
+  }
+  @include for-ex-wide-layout {
+    grid-template-columns:
+      minmax($layout-padding * 1px, 1fr)
+      minmax(auto, $wide-breakpoint)
+      minmax($layout-padding * 1px, 1fr);
+  }
+  @include for-extra-wide-layout {
+    grid-template-columns:
+      minmax($layout-padding * 1px, 1fr)
+      minmax(auto, $extra-wide-breakpoint)
+      minmax($layout-padding * 1px, 1fr);
+  }
+}

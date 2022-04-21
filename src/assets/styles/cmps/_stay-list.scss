@@ -1,0 +1,14 @@
+.stay-list {
+  display: grid;
+  padding: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: $layout-padding * 1px;
+
+  .preview_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid rgb(235, 235, 235);
+  }
+}

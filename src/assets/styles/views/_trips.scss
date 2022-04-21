@@ -1,0 +1,108 @@
+.trips-page {
+  margin-top: 120px;
+  min-height: 100vh;
+
+  & h1 {
+    height: 50px;
+    margin: none;
+    font-family: airbnb-medium, sans-serif;
+  }
+  & ul {
+    gap: 25px;
+    border-bottom: 1px solid $clr8;
+    margin-bottom: 40px;
+    & li {
+      color: $clr4;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+    & li.active {
+      color: $clr2;
+      border-bottom: 2px solid $clr2;
+    }
+  }
+  & .trip-list-container {
+    display: flex;
+    flex-direction: column;
+
+    .trip-preview {
+      .imgs-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(20px, 350px));
+        grid-auto-rows: minmax(66px, 100px);
+        gap: 5px;
+      }
+      padding-bottom: 25px;
+
+      img:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      img:nth-child(2) {
+        border-top-right-radius: 10px;
+      }
+      img:nth-child(3) {
+        border-bottom-right-radius: 10px;
+      }
+      .info {
+        > * {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        strong {
+          text-align: start;
+          // width: 270px;
+          width: 200px;
+          font-size: rem(18px);
+          font-family: airbnb-medium;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          min-width: 50px;
+        }
+        .approved {
+          color: green;
+          font-family: airbnb-medium;
+        }
+        .pending {
+          color: blue;
+        }
+
+        text-align: right;
+        font-size: rem(16px);
+
+        & .btn {
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .trips-page {
+    .trip-list-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(100, 300px);
+      column-gap: 60px;
+      row-gap: 20px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.simple-btn {
+  font-size: rem(14px);
+  padding: 8px 15px;
+  border-radius: 5px;
+  width: max-content;
+  color: #fff;
+
+  &.pink {
+    background-color: $clr1;
+  }
+  &.grey {
+    background-color: $clr7;
+  }
+  &:active {
+    padding: 9px 22px;
+  }
+}
+.special-hover-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  font-size: rem(16px);
+
+  padding: 1em 2.5em;
+  position: relative;
+  appearance: none;
+  background: #f72359;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 10px;
+
+  span {
+    position: relative;
+  }
+  &::before {
+    --size: 1000px;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+
+    background-image: radial-gradient(
+      circle at center center,
+      rgb(235, 67, 97) 0%,
+      rgb(194, 35, 93) 50%,
+      rgba(202, 4, 159, 0) 100%
+    );
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+  }
+
+  &:hover::before {
+    --size: 1000px;
+  }
+}
+
+.close-btn {
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: $clr2;
+  transition: background-color 0.1s ease;
+  &:hover {
+    background-color: $clr8;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  @media screen and (min-width: 680px) {
+    .simple-btn {
+      font-size: rem(16px);
+      padding: 10px 23px;
+    }
+  }
+}

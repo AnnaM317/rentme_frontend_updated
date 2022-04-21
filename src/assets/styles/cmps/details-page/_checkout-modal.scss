@@ -1,0 +1,31 @@
+.checkout-modal {
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgb(210, 209, 209);
+  box-shadow: 0 6px 16px -2px rgb(210, 209, 209);
+
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 13px;
+  margin-top: 10px;
+
+  .close-modal {
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+
+    background-color: #ff385c;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .section-checkout {
+    margin-left: 60px;
+    .checkout-modal {
+      width: 100%;
+    }
+  }
+}

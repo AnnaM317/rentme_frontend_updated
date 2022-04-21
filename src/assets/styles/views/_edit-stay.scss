@@ -1,0 +1,81 @@
+.stay-details.edit {
+  input,
+  select,
+  textarea {
+    font-family: airbnb-light, sans-serif;
+    border: none;
+    border-radius: 5px;
+    outline: 1px solid $clr7;
+    padding: 5px 8px;
+    background-color: #fff;
+    &:focus {
+      outline: 1px solid $clr4;
+    }
+  }
+  input[type='number' i] {
+    width: 60px;
+  }
+  input[type='checkbox' i] {
+    outline: none;
+  }
+  select {
+    width: 120px;
+  }
+  textarea {
+    padding: 15px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  h2 input {
+    font-size: rem(24px);
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  #imgUploader {
+    visibility: hidden;
+  }
+  .stay-details-right-container {
+    position: fixed;
+    z-index: 99999;
+    top: 75%;
+    right: 10%;
+    .simple-btn {
+      width: 100%;
+      box-shadow: 2px 2px 10px 1px rgba(113, 113, 113, 0.38);
+    }
+  }
+  img {
+    border: 1px dashed $clr5;
+    cursor: pointer;
+  }
+
+  .details-main-container {
+    grid-template-columns: 1fr 0.5fr 1fr;
+    gap: 0px;
+  }
+  .delete-btn {
+    font-size: 2rem;
+    color: $clr4;
+    height: min-content;
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .stay-details.edit {
+    h2 input {
+      width: 350px;
+      font-family: airbnb-medium, sans-serif;
+    }
+    .stay-details-right-container {
+      justify-content: center;
+    }
+    .stay-details-right-container {
+      position: static;
+      .simple-btn {
+        box-shadow: none;
+        width: max-content;
+      }
+    }
+  }
+}
